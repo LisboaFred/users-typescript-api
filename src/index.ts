@@ -5,7 +5,6 @@ import { GetUsersController } from "./controllers/get-users/get-users";
 import { MongoClient } from "./database/mongo";
 import { MongoCreateUserRepository } from "./repositories/create-users/mongo-create-users";
 import { CreateUserController } from "./controllers/create-user/create-user";
-import { createReadStream } from "fs";
 
 const main = async () => {
   config();
