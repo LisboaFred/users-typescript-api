@@ -29,7 +29,7 @@ const main = async () => {
     const { body, statusCode } = await createUserController.handle({
       body: req.body,
     });
-    res.send(body).status(statusCode);
+    return res.status(statusCode).send(body);
   });
 
   const port = process.env.PORT || 8000;
