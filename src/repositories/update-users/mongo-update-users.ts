@@ -9,7 +9,7 @@ import { User } from "../../models/user";
 export class MongoUpdateUserRepository implements IUpdateUsersRepository {
   async updateUser(id: string, params: UpdateUserParams): Promise<User> {
     await MongoClient.db.collection("users").updateOne(
-      { _id: new Object(id) },
+      { _id: new ObjectId(id) },
       {
         $set: {
           ...params,
